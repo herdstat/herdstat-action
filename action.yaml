@@ -1,0 +1,13 @@
+#
+# Copyright (c) 2023 - for information on the respective copyright owner
+# see the NOTICE file and/or the repository https://github.com/herdstat/herdstat-action.
+#
+# SPDX-License-Identifier: MIT
+#
+
+name: 'Herdstat'
+description: 'Analyze an open source project/community using the herdstat utility'
+author: 'Sven Trieflinger'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
