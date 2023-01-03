@@ -31,7 +31,7 @@ FROM ubuntu:22.10
 RUN apt-get update && apt-get install -y ca-certificates
 
 # Copy over files from build phase
-COPY --from=build /go/mergestat-lite/.build/libmergestat.so /
+COPY --from=build /go/mergestat-lite/.build/libmergestat.so /usr/lib/
 COPY --from=build /herdstat/herdstat /
 
 CMD ["/herdstat", "-c", ".herdstat.yaml", "contribution-graph"]
