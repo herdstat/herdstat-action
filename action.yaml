@@ -8,6 +8,9 @@
 name: 'Herdstat'
 description: 'Analyze an open source project/community using the herdstat utility'
 author: 'Sven Trieflinger'
+branding:
+  color: green
+  icon: bar-chart
 runs:
   using: 'docker'
   image: 'Dockerfile'
