@@ -24,19 +24,32 @@ repositories:
 ```
 
 This is a minimal configuration. For a full reference on all available options
-see [.herdstat.reference.yaml][herdstat-ref].
+see the `herdstat` [README][herdstat] and the [.herdstat.reference.yaml][herdstat-ref].
 
 [herdstat-ref]: https://github.com/herdstat/herdstat/blob/main/.herdstat.reference.yaml
 
 ### Workflow
 
+A sample workflow that generates a contribution graph daily at midnight and
+stores the resulting graph in the repository looks as follows:
+
 ```yaml
 on:
-  workflow_dispatch:
+  schedule:
+    # Runs every at midnight
+    - cron: '0 0 * * *'
 jobs:
   herdstat:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: herdstat/herdstat-action@v0.1.0
+      - uses: actions/checkout@v3
+      - uses: herdstat/herdstat-action@v0.1.1
+      - uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          add: 'contribution-graph.svg'
+          message: 'Update contribution graph'
 ```
+
+You can see that workflow in action in the [herdstat/.github](https://github.com/herdstat/.github)
+repository. The graph is included in the [herdstat organization profile](https://github.com/herdstat). 
