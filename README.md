@@ -3,35 +3,29 @@
 [![stability-wip](https://img.shields.io/badge/stability-wip-lightgrey.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#work-in-progress)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
-> **Warning**
-> `herdstat-action` is work in progress and neither feature complete nor tested thoroughly.
+> **Warning** `herdstat-action` is work in progress and neither feature complete nor tested thoroughly.
 
-`herdstat-action` is a GitHub action for analyzing the community around open
-source projects. For more details see the [herdstat repository][herdstat]
-
-[herdstat]: https://github.com/herdstat/herdstat/
+`herdstat-action` is a GitHub action for analyzing the community around open source projects. For more details see the
+[herdstat repository][herdstat]
 
 ## Usage
 
 ### Configuration
 
-Create a `.herdstat.yaml` file at the root of your repository with the
-following content
+Create a `.herdstat.yaml` file at the root of your repository with the following content
 
 ```yaml
 repositories:
-  - <owner>/<repo> 
+  - <owner>/<repo>
 ```
 
-This is a minimal configuration. For a full reference on all available options
-see the `herdstat` [README][herdstat] and the [.herdstat.reference.yaml][herdstat-ref].
-
-[herdstat-ref]: https://github.com/herdstat/herdstat/blob/main/.herdstat.reference.yaml
+This is a minimal configuration. For a full reference on all available options see the `herdstat` [README][herdstat] and
+the [.herdstat.reference.yaml][herdstat-ref].
 
 ### Workflow
 
-A sample workflow that generates a contribution graph daily at midnight and
-stores the resulting graph in the repository looks as follows:
+A sample workflow that generates a contribution graph daily at midnight and stores the resulting graph in the repository
+looks as follows:
 
 ```yaml
 on:
@@ -43,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: herdstat/herdstat-action@v0.1.1
+      - uses: herdstat/herdstat-action@v0.2.0
       - uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
@@ -51,5 +45,8 @@ jobs:
           message: 'Update contribution graph'
 ```
 
-You can see that workflow in action in the [herdstat/.github](https://github.com/herdstat/.github)
-repository. The graph is included in the [herdstat organization profile](https://github.com/herdstat). 
+You can see that workflow in action in the [herdstat/.github](https://github.com/herdstat/.github) repository. The graph
+is included in the [herdstat organization profile](https://github.com/herdstat).
+
+[herdstat]: https://github.com/herdstat/herdstat/
+[herdstat-ref]: https://github.com/herdstat/herdstat/blob/main/.herdstat.reference.yaml
