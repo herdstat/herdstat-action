@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/herdstat/herdstat-action/compare/v0.3.0...v0.3.1) (2023-01-10)
+
+
+### Miscellaneous Chores
+
+* update to latest herdstat version ([96e6172](https://github.com/herdstat/herdstat-action/commit/96e61727c2e9ea6dceb6f454d1f61f56afedad50))
+
 ## [0.3.0](https://github.com/herdstat/herdstat-action/compare/v0.2.0...v0.3.0) (2023-01-09)
 
 
