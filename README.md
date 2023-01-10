@@ -38,9 +38,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: herdstat/herdstat-action@v0.4.0
+      - uses: herdstat/herdstat-action@v0.4.1
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.HERDSTAT_PAT }}
       - uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
@@ -48,8 +48,8 @@ jobs:
           message: 'Update contribution graph'
 ```
 
-Note that we provide the GitHub token to the action by means of the `GITHUB_TOKEN` environment variable to avoid rate
-limiting issues for unauthenticated API calls.
+Note that we provide a PAT to the action by means of the `GITHUB_TOKEN` environment variable to avoid rate limiting
+issues for unauthenticated API calls.
 
 You can see that workflow in action in the [herdstat/.github](https://github.com/herdstat/.github) repository. The graph
 is included in the [herdstat organization profile](https://github.com/herdstat).
