@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: herdstat/herdstat-action@v0.3.0
+      - uses: herdstat/herdstat-action@v0.4.0
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - uses: EndBug/add-and-commit@v9

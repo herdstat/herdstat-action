@@ -8,6 +8,6 @@
 # syntax=docker/dockerfile:1
 
 # Build action image
-FROM herdstat/herdstat:v0.3.0
+FROM herdstat/herdstat:v0.4.0
 
 CMD ["/herdstat", "-c", ".herdstat.yaml", "contribution-graph"]
