@@ -49,7 +49,7 @@ jobs:
 ```
 
 Note that we provide a PAT to the action by means of the `GITHUB_TOKEN` environment variable to avoid rate limiting
-issues for unauthenticated API calls.
+issues for unauthenticated API calls. The required scopes for the PAT are `public_repo` and `read:org`.
 
 You can see that workflow in action in the [herdstat/.github](https://github.com/herdstat/.github) repository. The graph
 is included in the [herdstat organization profile](https://github.com/herdstat).
