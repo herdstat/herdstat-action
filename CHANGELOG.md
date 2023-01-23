@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/herdstat/herdstat-action/compare/v0.3.2...v0.5.1) (2023-01-23)
+
+
+### Features
+
+* support latest herdstat version with color support ([de122e1](https://github.com/herdstat/herdstat-action/commit/de122e198f858b343db88c7f0f6f70ed0e6398db))
+
 ## [0.3.2](https://github.com/herdstat/herdstat-action/compare/v0.3.1...v0.3.2) (2023-01-10)
 
 
