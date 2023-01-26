@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.2](https://github.com/herdstat/herdstat-action/compare/v0.5.1...v0.5.2) (2023-01-26)
+
+
+### Bug Fixes
+
+* update to latest herdstat version with fix for contribution graph ([3d063af](https://github.com/herdstat/herdstat-action/commit/3d063af5ef7565b33db5ca067525817a3531814e))
+
 ## [0.5.1](https://github.com/herdstat/herdstat-action/compare/v0.3.2...v0.5.1) (2023-01-23)
 
 
