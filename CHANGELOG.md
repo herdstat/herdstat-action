@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/herdstat/herdstat-action/compare/v0.7.0...v0.8.0) (2023-03-05)
+
+
+### Features
+
+* migrate to binary release based action ([d48ab2e](https://github.com/herdstat/herdstat-action/commit/d48ab2e8b49bf365c56b0a9299a5bdfb3eefb046))
+
 ## [0.7.0](https://github.com/herdstat/herdstat-action/compare/v0.6.0...v0.7.0) (2023-02-23)
 
 
