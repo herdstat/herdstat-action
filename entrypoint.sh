@@ -23,4 +23,4 @@ curl -sL "${HERDSTAT_CLI_URL}" | tar -xz
 
 # Invoke herdstat with configuration read from file
 echo "Invoking herdstat CLI with configuration read from '.herdstat.yaml'"
-/herdstat -c .herdstat.yaml contribution-graph
+./herdstat -c .herdstat.yaml contribution-graph
