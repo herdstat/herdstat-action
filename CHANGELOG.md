@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/herdstat/herdstat-action/compare/v0.8.0...v0.8.1) (2023-03-05)
+
+
+### Bug Fixes
+
+* use correct path to herdstat executable ([0d50e30](https://github.com/herdstat/herdstat-action/commit/0d50e301becc61811c765dfd3079b80dd4af6df2))
+
 ## [0.8.0](https://github.com/herdstat/herdstat-action/compare/v0.7.0...v0.8.0) (2023-03-05)
 
 
