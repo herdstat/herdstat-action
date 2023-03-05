@@ -7,7 +7,10 @@
 
 # syntax=docker/dockerfile:1
 
-# Build action image
-FROM herdstat/herdstat:v0.7.0
+FROM ubuntu:22.10
 
-CMD ["/herdstat", "-c", ".herdstat.yaml", "contribution-graph"]
+RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recommends
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]

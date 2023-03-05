@@ -11,6 +11,13 @@ author: 'Sven Trieflinger'
 branding:
   color: green
   icon: bar-chart
+inputs:
+  version:
+    description: 'The herdstat CLI version to use'
+    required: true
+    default: "latest"
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.version }}

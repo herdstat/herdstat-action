@@ -9,6 +9,12 @@
 `herdstat-action` is a GitHub action for analyzing the community around open source projects. For more details see the
 [herdstat repository][herdstat]
 
+## Inputs
+
+| Input     | Description                             | Required | Default  |
+| --------- | --------------------------------------- | -------- | -------- |
+| `version` | The version of the herdstat CLI to use. | Yes      | `latest` |
+
 ## Usage
 
 ### Configuration
@@ -38,7 +44,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: herdstat/herdstat-action@v0.7.0
+      - uses: herdstat/herdstat-action@v0.8.0
+        with:
+          version: v0.8.0
         env:
           GITHUB_TOKEN: ${{ secrets.HERDSTAT_PAT }}
       - uses: EndBug/add-and-commit@v9
