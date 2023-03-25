@@ -14,10 +14,15 @@ branding:
 inputs:
   version:
     description: 'The herdstat CLI version to use'
-    required: true
+    required: false
     default: "latest"
+  configuration:
+    description: 'The path to the herdstat configuration file'
+    required: false
+    default: ".herdstat.yaml"
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.version }}
+    - ${{ inputs.configuration }}

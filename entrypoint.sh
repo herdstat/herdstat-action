@@ -15,6 +15,8 @@ get_latest_release() {
 # Initialize arguments
 HERDSTAT_CLI_VERSION=$([ "$1" == "latest" ] && get_latest_release || echo "$1")
 echo "Using version '${HERDSTAT_CLI_VERSION}' of herdstat CLI"
+HERDSTAT_CONFIGURATION_FILE=$2
+echo "Using configuration file at path '${HERDSTAT_CONFIGURATION_FILE}'"
 
 # Download herdstat CLI
 HERDSTAT_CLI_URL="https://github.com/herdstat/herdstat/releases/download/${HERDSTAT_CLI_VERSION}/herdstat-${HERDSTAT_CLI_VERSION}-linux-amd64.tar.gz"
@@ -22,5 +24,5 @@ echo "Downloading herdstat CLI from URL '${HERDSTAT_CLI_URL}'"
 curl -sL "${HERDSTAT_CLI_URL}" | tar -xz
 
 # Invoke herdstat with configuration read from file
-echo "Invoking herdstat CLI with configuration read from '.herdstat.yaml'"
-./herdstat -c .herdstat.yaml contribution-graph
+echo "Invoking herdstat CLI"
+./herdstat -c "${HERDSTAT_CONFIGURATION_FILE}" contribution-graph

@@ -11,9 +11,10 @@
 
 ## Inputs
 
-| Input     | Description                             | Required | Default  |
-| --------- | --------------------------------------- | -------- | -------- |
-| `version` | The version of the herdstat CLI to use. | Yes      | `latest` |
+| Input           | Description                             | Required | Default          |
+| --------------- | --------------------------------------- | -------- | ---------------- |
+| `version`       | The version of the herdstat CLI to use. | No       | `latest`         |
+| `configuration` | The configuration file to use.          | No       | `.herdstat.yaml` |
 
 ## Usage
 
@@ -61,6 +62,10 @@ issues for unauthenticated API calls. The required scopes for the PAT are `publi
 
 You can see that workflow in action in the [herdstat/.github](https://github.com/herdstat/.github) repository. The graph
 is included in the [herdstat organization profile](https://github.com/herdstat).
+
+> **Note** You can generate multiple contribution graphs in the same workflow by using multiple steps using the
+> `herdstat` action each with a custom configuration file (using the `configuration` input parameter) with a different
+> output filename (`contribution-graph/filename` property).
 
 [herdstat]: https://github.com/herdstat/herdstat/
 [herdstat-ref]: https://github.com/herdstat/herdstat/blob/main/.herdstat.reference.yaml
