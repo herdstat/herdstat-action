@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/herdstat/herdstat-action/compare/v0.8.1...v0.9.0) (2023-03-25)
+
+
+### Features
+
+* allow for specifying configuration file to use ([fdf50b7](https://github.com/herdstat/herdstat-action/commit/fdf50b795a71fe19e38d5896a08f26fe8001847f))
+
 ## [0.8.1](https://github.com/herdstat/herdstat-action/compare/v0.8.0...v0.8.1) (2023-03-05)
 
 
