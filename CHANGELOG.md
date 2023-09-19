@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.1](https://github.com/herdstat/herdstat-action/compare/v0.9.0...v0.9.1) (2023-09-19)
+
+
+### Bug Fixes
+
+* update to latest ubuntu version ([#20](https://github.com/herdstat/herdstat-action/issues/20)) ([3a472c5](https://github.com/herdstat/herdstat-action/commit/3a472c567692c726cd25ef53442eba5dced527ff))
+
 ## [0.9.0](https://github.com/herdstat/herdstat-action/compare/v0.8.1...v0.9.0) (2023-03-25)
 
 
